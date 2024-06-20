@@ -7,10 +7,10 @@ on:
         type: string
         required: true
 
-    outputs:
-      secret_called_repo:
-      description: "This is a secret in the repo of a called workflow"
-      value: ${{ jobs.job1.outputs.secret_called_repo }}
+#    outputs:
+#      secret_called_repo:
+#      description: "This is a secret in the repo of a called workflow"
+#      value: ${{ jobs.job1.outputs.secret_called_repo }}
 jobs:
 
   job1:
