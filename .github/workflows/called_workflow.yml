@@ -14,9 +14,12 @@ jobs:
 
   job1:
     runs-on: ubuntu-latest
+    outputs:
+      secret_called_repo: ${{ steps.step1.outputs.secret_called_repo }}
     steps:
 
       - name: step1
+        id: step1
         run: |
          echo "This is a step 1 from called workflow"
          echo "This is a secret from the repo where called_workflow resides: ${{ secrets.called_workflow }}"
