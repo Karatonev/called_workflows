@@ -8,7 +8,9 @@ on:
         required: true
 
     outputs:
-      secret_called_repo: ${{ jobs.job1.outputs.secret_called_repo }}
+      secret_called_repo:
+      description: "This is a secret in the repo of a called workflow"
+      value: ${{ jobs.job1.outputs.secret_called_repo }}
 jobs:
 
   job1:
