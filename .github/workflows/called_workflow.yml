@@ -8,8 +8,7 @@ on:
         required: true
 
     outputs:
-      secret_called_repo: jobs.job1.outputs.secret_called_repo
-      description: This is an output from a secret defined in called repo.
+      secret_called_repo: ${{ jobs.job1.outputs.secret_called_repo }}
 jobs:
 
   job1:
