@@ -26,4 +26,4 @@ jobs:
          echo "This is a secret from the repo where called_workflow resides: ${{ secrets.CALLED_WORKFLOW }}"
          echo "secret_called_repo=${{ secrets.called_workflow }}" >> $GITHUB_OUTPUT
          echo "This is passed from caller workflow as a input: ${{ inputs.input1 }}"
-         echo "This is a secret inherited from the calling workflow: ${{ secrets.caller_workflow }}"
+         echo "This is a secret inherited from the calling workflow: ${{ secrets.CALLER_WORKFLOW }}"
